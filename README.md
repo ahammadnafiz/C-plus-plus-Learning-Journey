@@ -1,7 +1,5 @@
 # C++ Learning Journey 🚀
 
-![C++ Logo](https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg)
-
 ## 📌 About This Repository
 Welcome to my **C++ Learning Journey**! This repository contains my notes, code snippets, and projects as I explore and master C++ programming. Whether you're a beginner or looking to refresh your skills, feel free to explore, contribute, or learn along with me!
 
