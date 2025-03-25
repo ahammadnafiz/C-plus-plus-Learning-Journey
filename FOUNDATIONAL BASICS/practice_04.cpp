@@ -5,14 +5,14 @@ using namespace std;
 
 int generateRandomNumber(int min, int max)
 {
-    srand(time(0));
+    srand(time(NULL));
     int randomNumber = min + rand() % (max - min + 1);
     return randomNumber;
 }
 
 void numberGuessingGame(int min, int max)
 {
-    srand(time(0));
+    srand(time(NULL));
     int randomNumber = generateRandomNumber(min, max);
     int guess;
     int attempts = 0;
