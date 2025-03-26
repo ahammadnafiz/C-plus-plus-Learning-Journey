@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+double getTotal(double prices[], int size);
+int searchArray(int arr[], int size, int searchValue);
+
 int main()
 {
     /*
@@ -49,5 +52,66 @@ int main()
     cout << numbers[3] << endl;
     cout << numbers[4] << endl;
 
+    // Iterating through the 'numbers' array using a loop
+    string foods[] = {"Pizza", "Burger", "Pasta", "Salad", "Sushi"};
+
+    for (int i = 0; i < sizeof(foods) / sizeof(string); i++)
+    {
+        cout << "Food " << i + 1 << ": " << foods[i] << endl;
+    }
+
+    // Pass array to a function
+    double prices[] = {10.99, 5.99, 8.49, 12.79, 6.29};
+    int size = sizeof(prices) / sizeof(prices[0]);
+    double total = getTotal(prices, size);
+
+    cout << "Total price: $" << total << endl;
+
+    // Search for an element in an array
+    int searchValue;
+    int arr[] = {10, 20, 30, 40, 50};
+    int index;
+    int size2 = sizeof(arr) / sizeof(arr[0]);
+    cout << "Enter a number to search: ";
+    cin >> searchValue;
+
+    index = searchArray(arr, size2, searchValue);
+
+    if (index != -1)
+    {
+        cout << "Element found at index: " << index << endl;
+    }
+    else
+    {
+        cout << "Element not found in the array." << endl;
+    }
+
+
     return 0;
+}
+
+double getTotal(double prices[], int size)
+{
+    double total = 0.0;
+
+    for (int i = 0; i < size; i++)
+    {
+        total += prices[i];
+    }
+
+    return total;
+}
+
+
+int searchArray(int arr[], int size, int searchValue)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == searchValue)
+        {
+            return i;
+        }
+    }
+
+    return -1;
 }
